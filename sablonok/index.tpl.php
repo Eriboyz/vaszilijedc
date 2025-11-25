@@ -32,17 +32,18 @@
         <div class="collapse navbar-collapse" id="menu">
 
             <!-- BAL OLDALI MENÜ -->
-            <ul class="navbar-nav">
-                <?php foreach ($oldalak as $url => $adat): ?>
-
-                        <li class="nav-item">
-                            <a class="nav-link <?= ($oldal['fajl'] === $adat['fajl']) ? 'active' : '' ?>"
-                               href="index.php?oldal=<?= $url ?>">
-                                <?= htmlspecialchars($adat['szoveg']) ?>
-                            </a>
-                        </li>
-                <?php endforeach; ?>
-            </ul>
+        <ul class="navbar-nav">
+        <?php foreach ($oldalak as $url => $adat): ?>
+            <?php if (!isset($adat['rejtett'])): ?>
+                <li class="nav-item">
+                    <a class="nav-link <?= ($oldal['fajl'] === $adat['fajl']) ? 'active' : '' ?>"
+                    href="index.php?oldal=<?= $url ?>">
+                        <?= htmlspecialchars($adat['szoveg']) ?>
+                    </a>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
 
 
             <div class="ms-auto d-flex align-items-center">

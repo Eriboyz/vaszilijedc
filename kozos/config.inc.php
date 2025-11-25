@@ -12,11 +12,19 @@ $fejlec = [
 
 // FRONT CONTROLLER routing
 $oldalak = array(
-    '/' => array('fajl' => 'cimlap', 'szoveg' => 'Főoldal', 'menun' => array(1,1)),
-    'tamogatas' => array('fajl' => 'tamogatas', 'szoveg' => 'Támogatás', 'menun' => array(1,1)),
-    'kepek' => array('fajl' => 'kepek', 'szoveg' => 'Képek', 'menun' => array(1,1)),
-    'kapcsolat' => array('fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
+    '/' => ['fajl' => 'cimlap', 'szoveg' => 'Főoldal'],
+    'tamogatas' => ['fajl' => 'tamogatas', 'szoveg' => 'Támogatás'],
+    'kepek' => ['fajl' => 'kepek', 'szoveg' => 'Képek'],
+    'kapcsolat' => ['fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat'],
+    'feltoltes' => ['fajl' => 'kepek', 'szoveg' => 'Feltöltés', 'rejtett' => true],
 );
+
+// Galéria beállítások
+$MAPPA = 'kepek/';
+$TIPUSOK = ['.jpg', '.jpeg', '.png', '.webp'];
+$MEDIATIPUSOK = ['image/jpeg', 'image/png', 'image/webp'];
+$DATUMFORMA = "Y.m.d. H:i";
+$MAXMERET = 500 * 1024;
 
 
 
