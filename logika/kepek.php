@@ -1,6 +1,5 @@
 <?php
 $uzenet = [];
-
 if (isset($_POST['kuld'])) {
     foreach ($_FILES as $fajl) {
 

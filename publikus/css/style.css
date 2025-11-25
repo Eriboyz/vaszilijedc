@@ -1,0 +1,9 @@
+.bg-dark {
+    background-color: rgb(11, 29, 83) !important;
+}
+
+.btn {
+     background-color: rgb(11, 29, 83) !important;
+     border: none;
+     font-weight: bold;
+}

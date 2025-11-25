@@ -5,9 +5,9 @@
 <head>
     <meta charset="UTF-8">
     <title><?= htmlspecialchars($ablakcim['cim']) ?></title>
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="publikus/css/style.css">
 </head>
 <body>
 
@@ -18,20 +18,18 @@
             <p class="mb-0"><?= $fejlec['motto'] ?></p>
         </div>
         <a href="https://vaszilijedc.hu" target="_blank" class="btn btn-outline-light btn-sm">
-            vasilijedc.hu oldal megnyitása →
+            vasilijedc.hu oldal megnyitása
         </a>
     </div>
 </header>
-<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-    <div class="container">
-        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <div class="container">
         <button class="navbar-toggler" type="button"
                 data-bs-toggle="collapse" data-bs-target="#menu">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="menu">
 
-            <!-- BAL OLDALI MENÜ -->
         <ul class="navbar-nav">
         <?php foreach ($oldalak as $url => $adat): ?>
             <?php if (!isset($adat['rejtett'])): ?>
@@ -44,12 +42,8 @@
             <?php endif; ?>
         <?php endforeach; ?>
     </ul>
-
-
             <div class="ms-auto d-flex align-items-center">
-                    <a class="btn btn-outline-primary d-flex align-items-center">
-                        <i class="bi bi-box-arrow-in-right me-1"></i> Belépés
-                    </a>
+            <a class="btn btn-dark d-flex align-items-center"> Belépés</a>
             </div>
         </div>
     </div>

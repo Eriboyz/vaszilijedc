@@ -1,20 +1,17 @@
 <?php
 include_once('kozos/config.inc.php');
 
-// --- KÉPEK ÖSSZEGYŰJTÉSE -------------------
+// képek beolvasása
 $kepek = [];
 $olvaso = opendir($MAPPA);
 while (($fajl = readdir($olvaso)) !== false) {
     if (is_file($MAPPA . $fajl)) {
-        // helyes kiterjesztés levágás
         $vege = "." . strtolower(pathinfo($fajl, PATHINFO_EXTENSION));
-        // ha jpg / jpeg / png → kiírjuk
         if (in_array($vege, $TIPUSOK)) {
             $kepek[$fajl] = filemtime($MAPPA . $fajl);
         }
     }
 }
-
 closedir($olvaso);
 arsort($kepek); // utolsó módosított kerül előre
 ?>
@@ -33,14 +30,13 @@ arsort($kepek); // utolsó módosított kerül előre
                 </a>
                 <p class="mt-2 fw-bold text-break text-wrap" style="word-break: break-word;">
     <?= htmlspecialchars($fajl) ?>
-</p>
+                </p>
                 <p class="text-muted"><?= date($DATUMFORMA, $datum) ?></p>
             </div>
         <?php endforeach; ?>
     </div>
 
         <h3 class="fw-bold mt-4">Képfeltöltés</h3>
-    
         <form action="index.php?oldal=feltoltes" method="post" enctype="multipart/form-data">
             <input type="file" name="elso" class="form-control mb-3" required>
             <button type="submit" name="kuld" class="btn btn-primary mt-2">

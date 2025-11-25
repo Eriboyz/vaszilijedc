@@ -1,25 +1,27 @@
 <?php
-// Az oldal címe
+//oldal címe
 $ablakcim = [
     'cim' => 'vaszilijedc.hu'
 ];
 
-// Fejléc adatai
+//fejléc adatai
 $fejlec = [
     'cim'   => 'vaszilijedc.hu',
     'motto' => 'Web-programozás'
 ];
 
-// FRONT CONTROLLER routing
+//front controller routing
 $oldalak = array(
     '/' => ['fajl' => 'cimlap', 'szoveg' => 'Főoldal'],
     'tamogatas' => ['fajl' => 'tamogatas', 'szoveg' => 'Támogatás'],
     'kepek' => ['fajl' => 'kepek', 'szoveg' => 'Képek'],
     'kapcsolat' => ['fajl' => 'kapcsolat', 'szoveg' => 'Kapcsolat'],
     'feltoltes' => ['fajl' => 'kepek', 'szoveg' => 'Feltöltés', 'rejtett' => true],
+    'uzenet' => ['fajl' => 'uzenet', 'szoveg' => 'Üzenet', 'rejtett' => true],
+    'uzenetek' => ['fajl' => 'uzenetek', 'szoveg' => 'Üzenetek'],
 );
 
-// Galéria beállítások
+//képekhez beállítások
 $MAPPA = 'kepek/';
 $TIPUSOK = ['.jpg', '.jpeg', '.png', '.webp'];
 $MEDIATIPUSOK = ['image/jpeg', 'image/png', 'image/webp'];
